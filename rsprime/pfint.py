@@ -67,7 +67,7 @@ class PFint(int):
         else:
             other = PFint(self.p, other)
         "Subtraction in PF(p) is normal subtraction modulo p"
-        # Python's modulo operator handles negitive numbers. If we didn't, we
+        # Python's modulo operator handles negative numbers. If we didn't, we
         # could just add p to a before subtracting b
         return PFint(self.p, (int(self) - int(other)) % self.p)
 
